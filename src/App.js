@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/Not-Found/NotFound";
+import MovieInfo from "./components/Movie-Info/MovieInfo";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="full-container">
+      <div className="App">
+        <AnimatePresence exitBeforeEnter>
+          <Routes location={location} key={location.key}>
+            <Route path="/" element={<Navbar />}>
+              <Route index element={<Home />} />
+              <Route path="*" element={<NotFound />} />
+              <Route path="/movie" element={<MovieInfo />} />
+            </Route>
+          </Routes>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

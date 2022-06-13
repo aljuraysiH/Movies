@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 4rem;
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      input {
+        outline: none;
+        border: none;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      button {
+        cursor: pointer;
+        color: var(--primary);
+        background-color: rgba(0, 0, 0, 0.5);
+
+        border: 1px solid var(--primary);
+        padding: 0.9rem 1.4rem;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    justify-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+
+.noImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 100%;
+}

@@ -1,0 +1,66 @@
+.containerError {
+  margin-top: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  a {
+    background-color: var(--primary-v2);
+    padding: 1rem 2rem;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background-color: #5f1e2b;
+    }
+  }
+}
+
+.container {
+  margin-top: 14rem;
+
+  .movie {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    margin: 0 auto;
+    text-align: center;
+    max-width: 60rem;
+    width: 80%;
+    padding: 1rem 1rem 2rem;
+    border: 1px dashed var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      font-family: "Alfa Slab One", cursive;
+      letter-spacing: 1.8px;
+      font-size: 2.6rem;
+    }
+    p {
+      line-height: 1.4;
+      font-size: 1.8rem;
+    }
+
+    button {
+      cursor: pointer;
+      background: none;
+      color: var(--primary);
+      padding: 1rem 2rem;
+      border: 1px solid var(--primary);
+    }
+
+    .noTrailer {
+      border: 1px solid var(--primary);
+      padding: 1rem 2rem;
+      text-decoration: line-through;
+      cursor: not-allowed;
+    }
+  }
+}

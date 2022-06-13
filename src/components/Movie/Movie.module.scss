@@ -1,0 +1,31 @@
+.movie-container {
+  background-color: rgba(10, 9, 8, 0.433);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 32rem;
+
+  img {
+    width: 100%;
+    height: 80%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: block;
+    object-fit: fill;
+  }
+
+  .movie-title {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      text-align: center;
+      white-space: nowrap;
+      width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 1rem;
+    }
+  }
+}
